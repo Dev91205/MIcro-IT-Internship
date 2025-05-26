@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 80px;
+  }
+  
+  .header-bar {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  
+  .mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .mode-toggle label {
+    font-size: 1rem;
+  }
+  
+  .mode-toggle select {
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+  
+  .game-container {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .board-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 20px auto;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+  }
+  
+  .cell:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .win-line {
+    position: absolute;
+    height: 5px;
+    background-color: red;
+    border-radius: 4px;
+    transform-origin: left center;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    z-index: 2;
+  }
+  
+  .status {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #444;
+  }
+  
+  .restart-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .restart-btn:hover {
+    background-color: #0056b3;
+  }
+  
